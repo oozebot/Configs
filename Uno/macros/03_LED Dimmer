@@ -1,0 +1,17 @@
+;== oozeBot Elevate Uno
+;== Version Number: 1.0 - initial release
+;== Release Date: 04/19/2022
+;== Release Notes: N/A
+
+;===========================================================================================
+;== Toggles LED brightness setting =========================================================
+if fans[12].actualValue < 0.25
+	M106 P12 S0.25
+elif fans[12].actualValue < 0.50
+	M106 P12 S0.50
+elif fans[12].actualValue < 0.75
+	M106 P12 S0.75
+elif fans[12].actualValue < 1.00
+	M106 P12 S1.00
+else
+	M106 P12 S0.00
